@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.agents/
+.rendering-checkpoint.txt
+study-space-finder-solo/
+*.png
+!assets/**/*.png
+!docs/*.png
+docs/preview/
+
+# Only the files used by the game are published; source asset packs stay local.
+assets/*
+!assets/player/
+!assets/enemies/
+!assets/tiles/
+!assets/weapons/
+!assets/music/

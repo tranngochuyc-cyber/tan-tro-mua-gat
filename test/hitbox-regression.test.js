@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import { circleHitsEntity, segmentHitsEntity } from '../src/engine/Hitboxes.js';
+import { Projectile } from '../src/entities/Projectile.js';
+import { Player } from '../src/entities/Player.js';
+
+const target = { x: 100, y: 100, hitboxW: 10, hitboxH: 20 };
+assert.equal(circleHitsEntity(80, 100, 10, target), false);
+assert.equal(circleHitsEntity(85, 100, 10, target), true);
+assert.equal(segmentHitsEntity(0, 100, 200, 100, 2, target), true);
+assert.equal(segmentHitsEntity(0, 70, 200, 70, 2, target), false);
+const projectile = new Projectile(0, 100, 2000, 0, 10, 'player', { radius: 2 });
+projectile.update(0.1, [], null, { w: 400, h: 200 });
+assert.equal(projectile.hits(target), true);
+projectile.registerHit(target);
+assert.equal(projectile.hits(target), false);
+const player = new Player({ getImage: () => null }, 0, 0);
+player.baseDmg = 17;
+assert.equal(player.attackDmg, 17);
+player.invulnerableTimer = 0.5;
+const hp = player.hp;
+player.takeDamage(10);
+assert.equal(player.hp, hp);
+console.log('Hitbox and skill damage regression checks passed.');
