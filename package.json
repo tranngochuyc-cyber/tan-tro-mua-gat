@@ -1,23 +1,16 @@
 {
   "name": "tan-tro-mua-gat",
-  "version": "1.0.0",
-  "description": "Tàn Tro Mùa Gặt — Ashen Harvest: Action roguelite 2D",
+  "version": "2.0.0",
+  "description": "Tàn Tro Mùa Gặt — Ashen Harvest: roguelite đi cảnh pixel, combat xúc xắc",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node test/game-audit.test.js && node test/ui-ux-flow.test.js && node test/unified-gameplay.test.js && node test/full-run-simulation.test.js && node test/e2e-simulation.test.js && node test/combat-acceptance.test.js && node test/class-system.test.js && node test/hitbox-regression.test.js"
+    "test": "node test/data.test.js",
+    "test:e2e": "node test/e2e-flow.cjs"
   },
-  "keywords": [
-    "game",
-    "roguelite",
-    "canvas"
-  ],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "puppeteer-core": "^25.12.0",
-    "vite": "^8.3.0"
+    "vite": "^5.4.0"
   }
 }
