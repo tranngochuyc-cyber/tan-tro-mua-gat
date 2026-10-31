@@ -6,6 +6,12 @@ Roguelite đi cảnh nhìn ngang, đồ hoạ pixel, lấy cảm hứng từ Dea
 
 ## Chơi thử
 
+### 🎮 [Chơi ngay trên trình duyệt](https://tranngochuyc-cyber.github.io/tan-tro-mua-gat/)
+
+Mở link là chơi được, không cần cài đặt: https://tranngochuyc-cyber.github.io/tan-tro-mua-gat/ (dùng bàn phím hoặc tay cầm).
+
+Chạy trên máy:
+
 ```bash
 npm install
 npm run dev        # mở http://localhost:3000
